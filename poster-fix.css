@@ -1,0 +1,46 @@
+/* Shared box sizing for the clone and its embedded graph controls. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Method portraits supplied with the poster clone. */
+.poster-card::before,
+.poster-card::after {
+  position: absolute;
+  inset: 0;
+  border-radius: 11px;
+  pointer-events: none;
+  content: '';
+}
+
+.poster-card::before {
+  z-index: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+}
+
+.poster-card::after {
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .65), rgba(255, 255, 255, .9));
+}
+
+.poster-card[data-sim='fermat']::before {
+  background-image: url('./ferma.jpg');
+}
+
+.poster-card[data-sim='descartes']::before {
+  background-image: url('./decart.jpg');
+}
+
+.poster-card[data-sim='barrow']::before {
+  background-image: url('./barrot.jpg');
+}
+
+.poster-card>* {
+  position: relative;
+  z-index: 2;
+}

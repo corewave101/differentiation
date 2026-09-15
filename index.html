@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>미분</title>
+  <meta name="description" content="서로 다른 함수에서 세 고전적 접선 작도법을 시뮬레이션하고, 하나의 공통 함수에서 현대의 도함수까지 동시에 비교하는 인터랙티브 연구 포스터" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsxgraph@1.8.0/distrib/jsxgraph.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <link rel="stylesheet" href="./poster-clone.css" />
+  <link rel="stylesheet" href="./poster-fix.css" />
+  <link rel="stylesheet" href="./comparison.css?v=method-strengths-1" />
+  <link rel="stylesheet" href="./applications.css" />
+  <link rel="stylesheet" href="./applications/mvp.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/jsxgraph@1.8.0/distrib/jsxgraphcore.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script type="module" src="./poster-clone.js?v=method-strengths-1"></script>
+</head>
+
+<body>
+  <main class="poster" id="poster">
+    <header class="poster-header">
+      <h1>미분:접선의 기울기</h1>
+    </header>
+    <div class="identity-bar"><span class="gold-cap"></span><span>10109 이상우 10112 정서후 10115 최승현</span><span
+        class="gold-cap"></span></div>
+
+    <section class="method-grid" aria-label="세 가지 접선 작도법">
+      <button class="poster-card" data-sim="fermat" type="button">
+        <span class="card-label"><span class="label-icon">✦</span> 페르마의 방법</span>
+        <span class="card-content"><span class="bullet">•</span> 페르마의 방법으로 접선의 기울기 구하기<br>클릭하여 자세히 보기</span>
+      </button>
+      <button class="poster-card" data-sim="descartes" type="button">
+        <span class="card-label"><span class="label-icon">▤</span> 데카르트의 방법</span>
+        <span class="card-content"><span class="bullet">•</span> 데카르트의 방법으로 접선의 기울기 구하기</span>
+      </button>
+      <button class="poster-card" data-sim="barrow" type="button">
+        <span class="card-label"><span class="label-icon">⚗</span> 바로의 방법</span>
+        <span class="card-content"><span class="bullet">•</span> 바로의 방법으로 접선의 기울기 구하기</span>
+      </button>
+    </section>
+
+    <button class="wide-card" data-sim="comparison" type="button">
+      <span class="card-label"><span class="label-icon">◎</span> 현대의 미분</span>
+      <span class="card-content"><span class="bullet">•</span> 하나의 함수에서 네 가지 미분 방법을 동시에 비교</span>
+      <span class="card-hint">공통 진행도로 네 그래프를 함께 움직이세요 <b>↗</b></span>
+    </button>
+
+    <button class="wide-card application-card" data-sim="application" type="button">
+      <span class="card-label"><span class="label-icon">✓</span> 미분의 실생활 활용</span>
+      <span class="card-content">3D 상자·원기둥·원뿔·구 · 부피와 도함수<br>배트 스윙 · 임팩트 속력 분석<br>터치스크린 · 손가락 속도와 미분</span>
+      <span class="card-hint">클릭해서 세 사례를 직접 조작하세요 <b>↗</b></span>
+    </button>
+  </main>
+
+    <div class="modal" id="simulation-modal" hidden aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <header class="modal-header">
+          <div>
+            <p class="modal-kicker" id="modal-kicker">SIMULATION</p>
+            <h2 id="modal-title"></h2>
+          </div><button class="close-button" type="button" data-close-modal aria-label="시뮬레이션 닫기">×</button>
+        </header>
+        <div class="modal-body" id="modal-body"></div>
+      </section>
+    </div>
+</body>
+
+</html>

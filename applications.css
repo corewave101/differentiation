@@ -1,0 +1,207 @@
+.application-card {
+  padding-bottom: 65px;
+}
+
+.applications {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #334c68;
+  line-height: 1.8;
+}
+
+.app-intro {
+  margin-top: 0;
+}
+
+.app-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.app-tabs button {
+  padding: 14px;
+  color: var(--navy);
+  background: white;
+  border: 2px solid #d5e1ee;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.app-tabs button[aria-pressed='true'] {
+  color: white;
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.app-tabs small {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 18px;
+}
+
+.app-visual,
+.app-controls,
+.app-derivation {
+  min-width: 0;
+  padding: 16px;
+  background: white;
+  border: 1px solid #d5e1ee;
+  border-radius: 8px;
+}
+
+.app-visual svg {
+  display: block;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #29384a;
+  fill: #29384a;
+}
+
+.scene-ink {
+  stroke: #29384a;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.scene-heading {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.scene-value {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.scene-small {
+  font-size: 12px;
+  fill: #6c798a;
+}
+
+.scene-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  color: #687b92;
+}
+
+.scene-actions button {
+  padding: 10px 18px;
+  border: 1px solid #bacadc;
+  border-radius: 6px;
+  background: #f3f7fc;
+  color: var(--navy);
+  cursor: pointer;
+}
+
+.app-derivation summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.app-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+}
+
+.app-controls .simulation-control {
+  margin: 0;
+}
+
+.app-controls .simulation-metrics,
+.app-controls .insight {
+  grid-column: 1 / -1;
+  margin-top: 0;
+}
+
+.app-controls .preset-row {
+  align-items: center;
+}
+
+.app-legend,
+.app-note,
+.app-source {
+  font-size: 12px;
+}
+
+.app-legend {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.app-controls .simulation-control:first-child {
+  margin-top: 0;
+}
+
+.app-controls label {
+  gap: 10px;
+}
+
+.app-controls .metric strong {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.app-derivation {
+  margin-top: 18px;
+  border-left: 5px solid var(--gold);
+}
+
+.app-derivation h4 {
+  margin: 0 0 12px;
+}
+
+.app-formula {
+  overflow-x: auto;
+  padding: 4px;
+}
+
+.app-source a {
+  color: var(--blue);
+}
+
+@media (max-width: 760px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .app-tabs {
+    gap: 5px;
+  }
+
+  .app-tabs button {
+    padding: 9px 5px;
+    font-size: 12px;
+  }
+
+  .app-tabs small {
+    font-size: 10px;
+  }
+
+  .app-formula {
+    font-size: 13px;
+  }
+
+  .app-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .app-visual {
+    padding: 8px;
+  }
+}
